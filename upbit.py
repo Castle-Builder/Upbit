@@ -2,9 +2,11 @@ import pyupbit
 import datetime
 import time
 
-access_key = ' '
-secret_key = ' '
+access_key = ''
+secret_key = ''
 upbit = pyupbit.Upbit(access_key, secret_key)
+
+print("Thank you Larry")
 
 # 3일 이평선 계산
 def get_yesterday_ma3(ticker):
@@ -70,5 +72,5 @@ while True:
         if current_price < target_price*0.98:
             sell_crypto_currency("KRW-ETH")
     except:
-        print("에러 발생")
+        print("")
     time.sleep(1)
